@@ -15,7 +15,7 @@ class ImageProviders {
 
     for (var data in response) {
       if (data.statusCode == 200) {
-        log('ini data >>${data.request!.url.toString()}');
+        
         imageUrl.add(data.bodyBytes);
       } else {
         log('Failed to load image. Status code: ${data.statusCode}');

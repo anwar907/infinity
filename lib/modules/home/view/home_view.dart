@@ -18,10 +18,7 @@ class HomeView extends StatelessWidget {
         child: Builder(builder: (context) {
           final TabController tabController = DefaultTabController.of(context);
           tabController.addListener(() {
-            if (!tabController.indexIsChanging) {
-              // Your code goes here.
-              // To get index of current tab use tabController.index
-            }
+            if (!tabController.indexIsChanging) {}
           });
           return Scaffold(
               appBar: AppBar(

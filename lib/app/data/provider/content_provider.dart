@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:http/http.dart' as http;
 import 'package:infinity/app/data/models/content_models.dart';
@@ -11,7 +10,6 @@ class ContentProvider {
           .get(Uri.parse('https://baconipsum.com/api/?type=meat-and-filler'));
 
       if (response.statusCode == 200) {
-        log('ini apa >>${response.body}');
         final jsonData = jsonDecode(response.body);
         return TextDataModels.fromJson(jsonData);
       } else {
